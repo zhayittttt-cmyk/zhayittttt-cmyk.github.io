@@ -1,0 +1,184 @@
+/* ------------------------------------------------------------
+   Personal site stylesheet. One file, no build step.
+   Colours and widths live in the :root variables below.
+   ------------------------------------------------------------ */
+
+:root {
+  --bg: #ffffff;
+  --fg: #222222;
+  --heading: #8b1a1a;   /* headings and the site title; change this one value to recolour them all */
+  --muted: #6b6b6b;
+  --link: #1a4f8a;
+  --rule: #e4e4e4;
+  --panel: #f5f5f5;
+  --width: 42rem;
+  --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; }
+
+body {
+  margin: 0;
+  padding: 2.5rem 1rem 4rem;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--serif);
+  line-height: 1.55;
+}
+
+header, main, footer {
+  max-width: var(--width);
+  margin: 0 auto;
+}
+
+/* Header and navigation ------------------------------------- */
+
+header { margin-bottom: 2.5rem; }
+
+.brand {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  color: var(--heading);
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: .5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2rem 1.1rem;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+nav a:hover { color: var(--fg); }
+
+nav a[aria-current="page"] {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+/* Text ------------------------------------------------------- */
+
+h1, h2, h3 {
+  color: var(--heading);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin: 0 0 .6rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 2.2rem 0 .6rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 1.6rem 0 .4rem;
+}
+
+p { margin: 0 0 1rem; }
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.lede { font-size: 1.1rem; }
+
+.muted { color: var(--muted); }
+
+.small { font-size: .9rem; }
+
+/* Button-like link row on the home page ---------------------- */
+
+.links {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem .7rem;
+}
+
+.links a {
+  display: inline-block;
+  padding: .35rem .8rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.links a:hover { background: var(--panel); }
+
+/* Tables ----------------------------------------------------- */
+
+.table-wrap { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .95rem;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: .5rem .7rem .5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+th {
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nowrap { white-space: nowrap; }
+
+/* Description lists (reading, projects) ---------------------- */
+
+dl dt {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+dl dd {
+  margin: .15rem 0 0;
+}
+
+/* Callout box ------------------------------------------------ */
+
+.note {
+  background: var(--panel);
+  border-radius: 6px;
+  padding: .8rem 1rem;
+  font-size: .95rem;
+}
+
+/* Footer ----------------------------------------------------- */
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+footer a { color: inherit; }
