@@ -12,7 +12,7 @@
   --rule: #e4e4e4;
   --panel: #f5f5f5;
   --width: 42rem;
-  --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --serif: "Source Serif 4", Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
 }
 
 * { box-sizing: border-box; }
@@ -40,7 +40,7 @@ header { margin-bottom: 2.5rem; }
 .brand {
   font-family: var(--serif);
   font-size: 1.7rem;
-  color: var(--heading);
+  color: var(--fg);
   text-decoration: none;
 }
 
