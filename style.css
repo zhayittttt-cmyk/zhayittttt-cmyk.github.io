@@ -102,6 +102,21 @@ a {
 
 .small { font-size: .9rem; }
 
+/* Superscript stacked over subscript, as in the 1 over 1 of a pointclass name.
+   Markup: <b>Π</b><span class="scripts"><sup>1</sup><sub>1</sub></span> */
+.scripts {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.scripts sup, .scripts sub {
+  font-size: .66em;
+  line-height: 1;
+  vertical-align: baseline;
+}
+
 /* Button-like link row on the home page ---------------------- */
 
 .links {
