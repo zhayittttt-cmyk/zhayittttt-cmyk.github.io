@@ -102,6 +102,9 @@ a {
 
 .small { font-size: .9rem; }
 
+/* A lone superscript or subscript should not push its line apart. */
+sup, sub { line-height: 0; }
+
 /* Superscript stacked over subscript, as in the 1 over 1 of a pointclass name.
    Markup: <b>Π</b><span class="scripts"><sup>1</sup><sub>1</sub></span> */
 .scripts {
