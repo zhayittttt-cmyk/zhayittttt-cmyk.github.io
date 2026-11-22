@@ -15,6 +15,7 @@ now.html          what you're doing this term
 style.css         all styling; colours and widths are variables at the top
 cv/cv.pdf         your CV                                  (add the file)
 notes/<course>-<term>/notes.pdf   one folder per course   (add the files)
+notes/short/<topic>.pdf           short notes, one PDF per topic
 problem-sets/<topic>.pdf          tutoring problem sets   (add the files)
 .nojekyll         tells GitHub Pages to serve the files as-is
 ```
