@@ -7,7 +7,7 @@ Plain HTML, one stylesheet, no build step. Hosted on GitHub Pages.
 ```
 index.html        home: intro, links, hobbies
 notes.html        course notes, one table per term
-research.html     research + course projects
+research.html     research
 tutoring.html     tutoring info + problem sets
 reading.html      self-study list
 now.html          what you're doing this term
