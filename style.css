@@ -6,7 +6,7 @@
 :root {
   --bg: #ffffff;
   --fg: #222222;
-  --heading: #0077be;   /* headings (ocean blue); change this one value to recolour them all */
+  --heading: #4a9fd8;   /* headings (sky blue); change this one value to recolour them all */
   --muted: #6b6b6b;
   --link: #1a4f8a;
   --rule: #e4e4e4;
