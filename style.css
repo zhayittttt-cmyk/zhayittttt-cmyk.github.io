@@ -85,12 +85,6 @@ h2 {
   margin: 2.2rem 0 .6rem;
 }
 
-/* A page title set at the size of a section heading (tutoring page). */
-h1.small-title {
-  font-size: 1.25rem;
-  line-height: inherit;
-}
-
 h3 {
   font-size: 1.05rem;
   margin: 1.6rem 0 .4rem;
