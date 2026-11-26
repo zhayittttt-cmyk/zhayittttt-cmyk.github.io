@@ -6,7 +6,9 @@
 :root {
   --bg: #ffffff;
   --fg: #222222;
-  --heading: #4a9fd8;   /* headings (sky blue); change this one value to recolour them all */
+  --heading: #222222;   /* headings (black, same as the text) */
+  --fall: #d2691e;      /* Fall term headings on the notes page (autumn leaves) */
+  --winter: #4a9fd8;    /* Winter term headings on the notes page (sky blue) */
   --muted: #6b6b6b;
   --link: #1a4f8a;
   --rule: #e4e4e4;
@@ -93,6 +95,10 @@ h3 {
   font-size: 1.05rem;
   margin: 1.6rem 0 .4rem;
 }
+
+/* Term headings on the notes page, coloured by season. */
+h2.fall { color: var(--fall); }
+h2.winter { color: var(--winter); }
 
 p { margin: 0 0 1rem; }
 

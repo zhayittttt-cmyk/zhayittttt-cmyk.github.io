@@ -45,7 +45,8 @@ problem-sets/<topic>.pdf          tutoring problem sets   (add the files)
 
 - Folder and file names: lowercase, no spaces, no `&` (they become `%20` and `%26` in URLs). Course folders are `<code>-<term>`: `math570-f26`, `comp252-w26`.
 - When you update a PDF, change the "Updated" cell in its row.
-- Every page links the stylesheet and the icons with a version number (`style.css?v=2`). After changing `style.css` or an icon, raise that number on every page; otherwise browsers keep showing the copy they saved.
+- Every page links the stylesheet and the icons with a version number (the `?v=` at the end of the link). After changing `style.css` or an icon, raise that number on every page; otherwise browsers keep showing the copy they saved.
+- On the notes page, term headings are coloured by season: `<h2 class="fall">` or `<h2 class="winter">`. The two colours are `--fall` and `--winter` at the top of `style.css`.
 - Keep each PDF under ~25 MB. GitHub refuses files over 100 MB and wants the whole repository under 1 GB.
 - Only post material you wrote yourself.
 
