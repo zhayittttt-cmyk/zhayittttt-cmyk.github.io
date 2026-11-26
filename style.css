@@ -177,11 +177,10 @@ th {
 
 /* Time capsule (notes page) ---------------------------------- */
 
-/* What was announced in mathematics during a term. Sits in the right margin
-   beside the term on wide screens, and under the term's table otherwise.
-   Markup: <section class="term"> h2, table, <aside class="capsule fall"> </section> */
-
-.term { position: relative; }
+/* What was announced in mathematics during a term, newest first. Sits in the
+   right margin beside the term on wide screens, and under the term's table otherwise.
+   Markup: <section class="term"> h2, table, <aside class="capsule fall"> </section>
+   Add class "before" to a capsule dated before its term: it goes to the foot of the term. */
 
 .capsule {
   margin: 0 0 1rem;
@@ -217,12 +216,29 @@ th {
 }
 
 @media (min-width: 1200px) {
-  .capsule {
-    position: absolute;
-    top: .4rem;
-    left: calc(100% + 1.75rem);
-    width: clamp(11.5rem, calc((100vw - 42rem) / 2 - 4rem), 16rem);
-    margin: 0;
+  /* Two columns: the term at full text width, and the capsule, which runs over
+     into the right margin. The last row has height only when the capsule is
+     taller than the heading and table, so capsules never run into each other. */
+  .term {
+    display: grid;
+    grid-template-columns: 100% clamp(11.5rem, calc((100vw - 42rem) / 2 - 4rem), 16rem);
+    grid-template-rows: auto auto 1fr;
+    column-gap: 1.75rem;
+    margin-top: 2.2rem;
+  }
+
+  .term > h2 { grid-area: 1 / 1; margin-top: 0; }
+  .term > .table-wrap { grid-area: 2 / 1; }
+
+  .term > .capsule {
+    grid-area: 1 / 2 / -1 / 3;
+    align-self: start;
+    margin: .4rem 0 0;
+  }
+
+  .term > .capsule.before {
+    align-self: end;
+    margin: 0 0 1rem;
   }
 }
 
