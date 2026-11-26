@@ -175,6 +175,65 @@ th {
 
 .nowrap { white-space: nowrap; }
 
+/* Time capsule (notes page) ---------------------------------- */
+
+/* What was announced in mathematics during a term. Sits in the right margin
+   beside the term on wide screens, and under the term's table otherwise.
+   Markup: <section class="term"> h2, table, <aside class="capsule fall"> </section> */
+
+.term { position: relative; }
+
+.capsule {
+  margin: 0 0 1rem;
+  padding-left: .8rem;
+  border-left: 2px solid var(--rule);
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.4;
+}
+
+.capsule.fall { border-left-color: var(--fall); }
+.capsule.winter { border-left-color: var(--winter); }
+
+.capsule-title {
+  margin: 0 0 .4rem;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.capsule ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.capsule li {
+  display: grid;
+  grid-template-columns: 2.7rem 1fr;
+  margin: 0 0 .4rem;
+}
+
+.capsule li:last-child { margin-bottom: 0; }
+
+.capsule .when {
+  font-size: .7rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  line-height: 1.64;   /* lines up with the first line of the text beside it */
+}
+
+@media (min-width: 1200px) {
+  .capsule {
+    position: absolute;
+    top: .4rem;
+    left: calc(100% + 1.75rem);
+    width: clamp(11.5rem, calc((100vw - 42rem) / 2 - 4rem), 16rem);
+    margin: 0;
+  }
+}
+
 /* Description lists (reading, projects) ---------------------- */
 
 dl dt {
