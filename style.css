@@ -195,14 +195,6 @@ th {
 .capsule.fall { border-left-color: var(--fall); }
 .capsule.winter { border-left-color: var(--winter); }
 
-.capsule-title {
-  margin: 0 0 .4rem;
-  font-size: .75rem;
-  font-weight: 600;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-}
-
 .capsule ul {
   list-style: none;
   margin: 0;
