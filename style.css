@@ -177,8 +177,10 @@ th {
 
 /* Time capsule (notes page) ---------------------------------- */
 
-/* What was announced in mathematics during a term, newest first. Sits in the
-   right margin beside the term on wide screens, and under the term's table otherwise.
+/* What was announced in mathematics during a term, newest first. Three layouts:
+   wide screens: in the right margin beside the term;
+   phones: to the right of the term, off screen, shown by swiping the term sideways;
+   in between: under the term's table.
    Markup: <section class="term"> h2, table, <aside class="capsule fall"> </section>
    Add class "before" to a capsule dated before its term: it goes to the foot of the term. */
 
@@ -239,6 +241,53 @@ th {
   .term > .capsule.before {
     align-self: end;
     margin: 0 0 1rem;
+  }
+}
+
+@media (max-width: 720px) {
+  /* The term becomes one strip that scrolls sideways, as wide as the screen:
+     the table at its full width, then the capsule to its right. The table no
+     longer scrolls on its own. The heading stays in place while the strip moves.
+     When the table fits the screen, the capsule's coloured rule shows at the
+     right edge as a cue. The strip has no padding (side margins are on its
+     children) so that the heading sticks at the same place in every browser. */
+  .term {
+    display: grid;
+    grid-template-columns: max-content min(18rem, calc(100vw - 3rem));
+    grid-template-rows: auto auto 1fr;
+    column-gap: .5rem;
+    margin: 2.2rem -1rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+  }
+
+  .term > h2 {
+    grid-area: 1 / 1 / 2 / -1;
+    justify-self: start;
+    position: sticky;
+    left: 1rem;
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+
+  .term > .table-wrap {
+    grid-area: 2 / 1;
+    width: min-content;
+    min-width: calc(100vw - 2rem);
+    margin-left: 1rem;
+    overflow: visible;
+  }
+
+  .term > .capsule {
+    grid-area: 2 / 2 / -1 / 3;
+    align-self: start;
+    margin: .5rem 1rem 0 0;
+  }
+
+  .term > .capsule.before {
+    align-self: end;
+    margin: 0 1rem 1rem 0;
   }
 }
 
