@@ -46,7 +46,7 @@ problem-sets/<topic>.pdf          tutoring problem sets   (add the files)
 - Folder and file names: lowercase, no spaces, no `&` (they become `%20` and `%26` in URLs). Course folders are `<code>-<term>`: `math570-f26`, `comp252-w26`.
 - `publish.sh` sets the "Updated" cell of a row on the notes page to the current month whenever one of the row's PDFs changes. For a PDF added another way, change the cell by hand. Keep each table row of `notes.html` on one line: the script finds a row by its PDF link.
 - Every page links the stylesheet and the icons with a version number (the `?v=` at the end of the link). After changing `style.css` or an icon, raise that number on every page; otherwise browsers keep showing the copy they saved.
-- On the notes page, term headings are coloured by season: `<h2 class="fall">` or `<h2 class="winter">`. The two colours are `--fall` and `--winter` at the top of `style.css`.
+- On the notes page, term headings are `<h3>`, coloured by season: `<h3 class="fall">` or `<h3 class="winter">`. The two colours are `--fall` and `--winter` at the top of `style.css`.
 - Time capsule (notes page): one line per result announced during a term, newest first, each linked to a write-up. The markup is an `<aside class="capsule fall">` (or `winter`) inside the term's `<section class="term">`; copy the Fall 2026 one.
 - Keep each PDF under ~25 MB. GitHub refuses files over 100 MB and wants the whole repository under 1 GB.
 - Only post material you wrote yourself.

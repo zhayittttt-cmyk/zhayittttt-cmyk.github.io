@@ -91,8 +91,8 @@ h3 {
 }
 
 /* Term headings on the notes page, coloured by season. */
-h2.fall { color: var(--fall); }
-h2.winter { color: var(--winter); }
+h3.fall { color: var(--fall); }
+h3.winter { color: var(--winter); }
 
 p { margin: 0 0 1rem; }
 
@@ -181,7 +181,7 @@ th {
    wide screens: in the right margin beside the term;
    phones: to the right of the term, off screen, shown by swiping the term sideways;
    in between: under the term's table.
-   Markup: <section class="term"> h2, table, <aside class="capsule fall"> </section>
+   Markup: <section class="term"> h3, table, <aside class="capsule fall"> </section>
    Add class "before" to a capsule dated before its term: it goes to the foot of the term. */
 
 .capsule {
@@ -226,10 +226,10 @@ th {
     grid-template-columns: 100% clamp(11.5rem, calc((100vw - 42rem) / 2 - 4rem), 16rem);
     grid-template-rows: auto auto 1fr;
     column-gap: 1.75rem;
-    margin-top: 2.2rem;
+    margin-top: 1.6rem;
   }
 
-  .term > h2 { grid-area: 1 / 1; margin-top: 0; }
+  .term > h3 { grid-area: 1 / 1; margin-top: 0; }
   .term > .table-wrap { grid-area: 2 / 1; }
 
   .term > .capsule {
@@ -256,13 +256,13 @@ th {
     grid-template-columns: max-content min(18rem, calc(100vw - 3rem));
     grid-template-rows: auto auto 1fr;
     column-gap: .5rem;
-    margin: 2.2rem -1rem 0;
+    margin: 1.6rem -1rem 0;
     overflow-x: auto;
     overflow-y: hidden;
     overscroll-behavior-x: contain;
   }
 
-  .term > h2 {
+  .term > h3 {
     grid-area: 1 / 1 / 2 / -1;
     justify-self: start;
     position: sticky;
