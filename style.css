@@ -108,6 +108,10 @@ a {
 
 .small { font-size: .9rem; }
 
+/* The licence line at the foot of the notes page, set apart from the last table. */
+.license { margin-top: 2rem; }
+.license a { color: inherit; }
+
 /* A lone superscript or subscript should not push its line apart. */
 sup, sub { line-height: 0; }
 
